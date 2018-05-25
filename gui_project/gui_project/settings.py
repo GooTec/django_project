@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-# import pymysql
+import pymysql
 
-# pymysql.install_as_MySQLdb()
+pymysql.install_as_MySQLdb()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -82,18 +82,18 @@ WSGI_APPLICATION = 'gui_project.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    
-    }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'gui_db', # DB명
-    #     'USER': 'root', # 데이터베이스 계정
-    #     'PASSWORD': 'Django123@', # 계정 비밀번호
-    #
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'gui_db', # DB명
+        'USER': 'root', # 데이터베이스 계정
+        'PASSWORD': 'Django123@', # 계정 비밀번호
+         
+    }
 }
 
 # Password validation
