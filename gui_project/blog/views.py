@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import DailyLog
 
 # Create your views here.
 def index(request):
-    return render(request, 'blog/index.html', {})
+    dailyLogs = DailyLog.objects.all()
+    return render(request, 'blog/index.html', {'dailyLogs' : dailyLogs})
